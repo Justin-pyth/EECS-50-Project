@@ -1,6 +1,4 @@
-# EECS-50-Project
-Energy Spectral Density Estimation Project
-
+# EECS-50-Project: Energy Spectral Density Estimation Project
 
 # Background and motivation.
 Energy spectral density (ESD) estimation
