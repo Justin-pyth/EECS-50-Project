@@ -1,44 +1,17 @@
 # EECS-50-Project: Energy Spectral Density Estimation Project
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=Justin-pyth/EECS-50-Project)
 
-# Background and motivation.
-Energy spectral density (ESD) estimation
-Estimates the distribution of the signal's energy over frequency domain. ESD can give the various components of the frequency of the signal and relative strengths. Used to help eliminate random components of noisy signal, and amplifying the legitimate components from signal's frequency spectrum
-Involves autocorrelation - correlating signal with itself
-Can interpret ESD as the energy per unit bandwidth, affected by the frequency components of the signal. Additionally, the total area under the ESD function will give the total signal energy.
-Note that ESD is when a signal is concentrated at a finite time interval or when total energy is finite. This differs from power spectral density or PSD which applies over all time or an "infinite" time interval.
+Try out our code for yourself using the link above!
 
+# Project Problem and Results
+For our project we chose to analyse a finite sinusoidal signal at 100 Hz with random noise. In real world application the results are much more applicable to broadband signals with denser frequencies, and a much longer signal. Since our signal is short, one second long, we do not need to perform averaging over the length of the samples. 
+We know that the energy spectrum is the FFT squared which we divide by N to get the ESD.
+Once we perform ESD, we create a threshold 10% from the max energy which is a peak at our 100 Hz signal. After denoising this from the FFT of the signal, and zeroing it, we perform IFFT to get the original signal. This filtered signal will have effectively removed the noise for all components for a certain energy threshold thus removing noise from our original frequency.
 
-# Equations:
-Parseval's Theorem
+Our results outputed a filtered signal cosine signal at the 100 Hz, using the methodology of ESD estimation. 
 
-Parseval's relates the energy within the time domain to the frequency domain. 
-
-Sample estimate of the autocorrelation:
-
-
-# Problem definition:
-Our proposed experiment is given a noisy signal, and calculate the energy spectrum. Apply a filter to remove frequency components with a certain energy bandwidth. The signal will most likely be continuous and finite. So we will need to take N samples and apply autocorrelation.
-
-
-# Proposed methods: 
-Parseval's theorem will be the summation of FFT in Matlab.
-Matlab has tools like FFT and DFT to apply the above mentioned methodology.
-Matlab also has a Spectrogram toolbox and specific tools like periodogram and pwelch (Welch's) which are for PSD but can be adapted for ESD.
-We have created a github repository and will be using Matlab's livescript docs to document our code and analysis.
-
-
-# List of people in your group. What are the tasks of each person?
-Tara Pai, Katrina Gong, Justin Wu
-We will do the following tasks collaboratively: Background and motivation, Sample calculations, Programming, Conclusion and discussion
-
-
-# References:
-Introduction to Digital Communications Book 2016 Author: Ali Grami
-Signals, Systems, and Transforms Fifth Edition Authors: Charles L. Phillips | John M. Parr | Eve A. Riskin
-Online resources:
-Very helpful course video series by Idaho State Uni
-Wikipedia Article
-StackExchange
-Matlab Help
+References
+[1] Signals, Systems, and Transforms Fifth Edition Authors: Charles L. Phillips | John M. Parr | Eve A. Riskin
+Very helpful [course video series]([url](https://youtube.com/playlist?list=PLe9mXJw-r7Gx0AZjOIFMLjufRIOI9GgLd&si=i6ijdiXtPpnxBrJt)) by Idaho State Uni
+Matlab video for [PSD estimation and Power Spectrum]([url](https://www.youtube.com/watch?v=pfjiwxhqd1M))
 
