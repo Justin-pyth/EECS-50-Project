@@ -1,4 +1,5 @@
 # EECS-50-Project: Energy Spectral Density Estimation Project
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=Justin-pyth/EECS-50-Project)
 
 # Background and motivation.
 Energy spectral density (ESD) estimation
