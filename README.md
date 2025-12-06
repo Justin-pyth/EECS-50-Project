@@ -12,6 +12,3 @@ Our results outputed a filtered signal cosine signal at the 100 Hz, using the me
 
 # References  
 [1] Signals, Systems, and Transforms Fifth Edition Authors: Charles L. Phillips | John M. Parr | Eve A. Riskin  
-Very helpful [course video series]((https://youtube.com/playlist?list=PLe9mXJw-r7Gx0AZjOIFMLjufRIOI9GgLd&si=i6ijdiXtPpnxBrJt)) by Idaho State Uni  
-Matlab video for [PSD estimation and Power Spectrum]((https://www.youtube.com/watch?v=pfjiwxhqd1M))  
-
